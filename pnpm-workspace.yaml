@@ -47,7 +47,7 @@ catalog:
   color: 5.0.3
   concurrently: 9.2.1
   copyfiles: 2.4.1
-  cpx: 1.5.0
+  cpx2: 9.1.0
   firebase: 12.9.0
   firebaseui: 6.1.0
   gl-matrix: 3.4.4
@@ -56,7 +56,7 @@ catalog:
   jotai-scope: 0.10.0
   jotai: 2.18.0
   jsdom: 28.1.0
-  lodash: 4.17.23
+  lodash: 4.18.1
   mdi-react: 9.4.0
   midifile-ts: 1.5.2
   mobx-react-lite: 4.1.1
@@ -76,13 +76,13 @@ catalog:
   use-sync-external-store: 1.6.0
   vite-plugin-checker: 0.12.0
   vite-plugin-svgr: 4.5.0
-  vite: 7.3.1
+  vite: 7.3.8
   vitest: 4.1.5
   wav-encoder: 1.3.0
   web-ble-midi: 0.1.0
   workbox-build: 7.4.0
   wouter: 3.9.0
-  zod: 4.3.6
+  zod: 4.6.7
 
 onlyBuiltDependencies:
   - esbuild
@@ -92,3 +92,13 @@ ignoredBuiltDependencies:
   - core-js
   - fsevents
   - protobufjs
+
+# AC-265: transitive packages held below their security fix by their parents.
+overrides:
+  "@grpc/grpc-js@1": ^1.14.7
+  serialize-javascript: ^7.1.4
+  shell-quote: ^1.12.0
+  source-map-js: ^1.2.4
+  undici@7: ^7.30.2
+  # One copy of the synth core, so player and app share its types.
+  spessasynth_core: "catalog:"

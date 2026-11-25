@@ -42,7 +42,7 @@
     "@biomejs/biome": "catalog:",
     "@testing-library/dom": "catalog:",
     "@types/aria-query": "catalog:",
-    "cpx": "catalog:",
+    "cpx2": "catalog:",
     "rimraf": "catalog:",
     "turbo": "catalog:",
     "concurrently": "catalog:"
